@@ -2,14 +2,14 @@ import datetime
 import random as rd
 import mysql.connector as sqltor
 
-# Connect to MySQL database
+# Connecting to MySQL database
 con = sqltor.connect(host="localhost", user="root", password="password")
 cur = con.cursor()
 
 cur.execute("CREATE DATABASE IF NOT EXISTS CHMS")
 cur.execute("USE CHMS")
 
-# Create the table for patient details
+# Creating the table for patient details
 cur.execute("CREATE TABLE IF NOT EXISTS appt"
             "(idno CHAR(12) PRIMARY KEY,"
             "name CHAR(20),"
@@ -31,7 +31,7 @@ tht8 = ''' GOOD MANNERS AND KINDNESS ARE ALWAYS IN FASHION '''
 # Inspirational Quote List
 th = (tht1, tht2, tht3, tht4, tht5, tht6, tht7, tht8)
 
-# Print greeting message
+# Printing greeting message
 print("""  
   
                ___       ___   ___            ___     _____ ___       ___  _____ _____
